@@ -14,7 +14,11 @@
       "Bash(ls node_modules/.bin)",
       "Bash(find node_modules -name \"react-scripts\" -type d)",
       "Bash(npx react-scripts --version)",
-      "Bash(npx react-scripts start)"
+      "Bash(npx react-scripts start)",
+      "Bash(rm -rf node_modules package-lock.json)",
+      "Bash(npm cache clean --force)",
+      "Bash(npm install @microsoft/signalr react react-dom react-scripts --save)",
+      "Bash(ls node_modules/@microsoft/signalr)"
     ],
     "deny": []
   }
