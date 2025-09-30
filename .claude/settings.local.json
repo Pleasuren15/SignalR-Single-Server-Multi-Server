@@ -5,7 +5,16 @@
       "Bash(mkdir -p SingleServerSignalR/Controllers SingleServerSignalR/Hubs SingleServerSignalR/Properties)",
       "Bash(cp -r SingleServerSignalR SignalRServer)",
       "Bash(rm -rf SingleServerSignalR)",
-      "Bash(mv SignalRServer/SingleServerSignalR.csproj SignalRServer/SignalRServer.csproj)"
+      "Bash(mv SignalRServer/SingleServerSignalR.csproj SignalRServer/SignalRServer.csproj)",
+      "Bash(mkdir -p signalr-client/src/components signalr-client/public)",
+      "Bash(cd signalr-client)",
+      "Bash(npm install)",
+      "Bash(ls node_modules)",
+      "Bash(ls node_modules/@microsoft)",
+      "Bash(ls node_modules/.bin)",
+      "Bash(find node_modules -name \"react-scripts\" -type d)",
+      "Bash(npx react-scripts --version)",
+      "Bash(npx react-scripts start)"
     ],
     "deny": []
   }
