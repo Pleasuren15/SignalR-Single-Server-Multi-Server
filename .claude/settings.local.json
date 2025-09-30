@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet new webapi -n SingleServerSignalR --framework net8.0)",
+      "Bash(mkdir -p SingleServerSignalR/Controllers SingleServerSignalR/Hubs SingleServerSignalR/Properties)",
+      "Bash(cp -r SingleServerSignalR SignalRServer)",
+      "Bash(rm -rf SingleServerSignalR)",
+      "Bash(mv SignalRServer/SingleServerSignalR.csproj SignalRServer/SignalRServer.csproj)"
+    ],
+    "deny": []
+  }
+}
