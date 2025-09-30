@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignalR Client</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SignalR Client</h1>
+            <div class="status" id="status">Disconnected</div>
+        </header>
+        
+        <div class="connection-section">
+            <div class="input-group">
+                <label for="serverUrl">Server URL:</label>
+                <input type="text" id="serverUrl" value="https://localhost:7001/chatHub" placeholder="Enter SignalR hub URL">
+            </div>
+            <div class="button-group">
+                <button id="connectBtn">Connect</button>
+                <button id="disconnectBtn" disabled>Disconnect</button>
+            </div>
+        </div>
+
+        <div class="messaging-section">
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="input-group">
+                <label for="message">Message:</label>
+                <input type="text" id="message" placeholder="Enter your message">
+                <button id="sendBtn" disabled>Send</button>
+            </div>
+        </div>
+
+        <div class="messages-section">
+            <h3>Messages</h3>
+            <div id="messages" class="messages-container"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@microsoft/signalr@latest/dist/browser/signalr.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
