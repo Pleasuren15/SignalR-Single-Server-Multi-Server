@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  signalr-server-1:
+    build:
+      context: .
+      dockerfile: SignalRServer/Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - signalr-network
+
+  signalr-server-2:
+    build:
+      context: .
+      dockerfile: SignalRServer/Dockerfile
+    ports:
+      - "5002:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - signalr-network
+
+  signalr-client-1:
+    build:
+      context: .
+      dockerfile: SignalRClient/Dockerfile
+    ports:
+      - "8080:80"
+    networks:
+      - signalr-network
+
+  signalr-client-2:
+    build:
+      context: .
+      dockerfile: SignalRClient/Dockerfile
+    ports:
+      - "8081:80"
+    networks:
+      - signalr-network
+
+networks:
+  signalr-network:
+    driver: bridge
